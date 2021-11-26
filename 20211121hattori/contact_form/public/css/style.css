@@ -1,0 +1,170 @@
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+form {
+  width: 50%;
+  margin: 20px auto ;
+}
+
+table {
+  margin: 0 auto;
+  width: 60%;
+}
+
+tr {
+  width: 30%;
+  height: 50px;
+}
+
+th {
+  text-align: left;
+  vertical-align: middle;
+}
+
+td {
+  text-align: left;
+  margin: 10px;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.contact_form {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.ttl {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.wrap {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin: 10px 0;
+}
+
+input {
+  border: 1px solid #979191;
+  width: 90%;
+  margin: 10px 10px;
+  height: 30px;
+}
+
+.example {
+  font-size: 12px;
+  color: #a3abab;
+  margin:20px;
+}
+
+textarea {
+  border: 1px solid #979191;
+  width: 90%;
+  margin: 10px;
+}
+
+svg.w-5.h-5 {  /*paginateメソッドの矢印の大きさ調整のために追加*/
+  width: 30px;
+  height: 30px;
+  }
+
+.size-input-nameS {
+  width: 90%;
+  margin-left: 0;
+  }
+
+.submit_btn {
+  width: 100px;
+  height: 50px;
+  margin:  0 auto;
+}
+
+.radio_btn {
+  border: 1px solid #979191;
+  width: 30px;
+}
+
+.button {
+  border-radius : 7%;
+  font-size     : 12px;
+  text-align    : center;
+  vertical-align: middle;
+  background    : #000000;
+  color         : #ffffff;
+  line-height   : 1em;
+  opacity       : 1;
+  transition    : .3s;
+}
+.button:hover {
+  opacity       : 0.8;
+}
+
+tr.ex {
+  height: 15px;
+}
+
+.label {
+  color: red;
+  font-size: 10px;
+  vertical-align: top;
+}
+
+.center {
+  text-align: center;
+  margin: 20px;
+}
+
+.link {
+  border: none;
+  background: none;
+  color: #0033cc;
+  text-decoration: underline;
+}
+
+.msg {
+  font-size: 30px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:100%;
+}
+
+.button_top {
+  display       : inline-block;
+  border-radius : 5%;
+  font-size     : 17pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 12px 12px;
+  background    : #000000;
+  color         : #ffffff;
+  line-height   : 14px;
+  opacity       : 1;
+  transition    : .3s;
+  margin-top    : 30px;
+}
+
+.button_top:hover {
+  opacity       : 0.8;
+}
+
+.confirm_content {
+  table-layout: fixed;
+}
+
+.box{
+  width: 70%;
+}
