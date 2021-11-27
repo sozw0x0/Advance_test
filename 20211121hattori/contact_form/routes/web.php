@@ -17,5 +17,6 @@ Route::get('/contact/complete', [ContactsController::class, 'complete'])->name('
 
 
 Route::get('/contact/admin', [ContactsController::class, 'top'])->name('admin.top');
-Route::post('/contaadmin/delete/{id?}', [ContactsController::class, 'delete'])->name('admin.delete');
 //管理ページ
+Route::post('/contaadmin/delete/{id?}', [ContactsController::class, 'delete'])->name('admin.delete');
+//削除

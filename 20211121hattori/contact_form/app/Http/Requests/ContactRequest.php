@@ -49,15 +49,4 @@ class ContactRequest extends FormRequest
             'opinion' => 'required|max:120',
         ];
     }
-
-    protected function passedValidation()
-{
-        $data = $this->all();
-
-        $tmp = explode(" ", $data['fullname']);
-        $tmp[0] = 'last_name';
-        $tmp[1] = 'first_name';
-
-        return parent::passedValidation();
-}
 }

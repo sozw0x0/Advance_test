@@ -71,22 +71,22 @@ class ContactsController extends Controller
 
         $query = Contact::query();
 
-        if (!empty($fullname)) {
-            $query->where('fullname', 'LIKE', '%'.$fullname.'%');
-        }
-
         if (!empty($gender == 3)) {
             $query->where('gender', 1)->orwhere('gender', 2);
         }else{
             $query->where('gender', $gender);
             }
 
+        if (!empty($fullname)) {
+            $query->where('fullname', 'LIKE', '%' . $fullname . '%')->where('gender', $gender);
+        }
+
         if (!empty($request['from']) && !empty($request['until'])) {
-            $query->whereBetween('created_at', [$request['from'], $request['until']]);
+            $query->whereBetween('created_at', [$request['from'], $request['until']])->where('gender', $gender);
         }
 
         if (!empty($email)) {
-            $query->where('email','LIKE', '%' . $email . '%');
+            $query->where('email','LIKE', '%' . $email . '%')->where('gender', $gender);
         }
 
         $contacts = $query->paginate(20);
