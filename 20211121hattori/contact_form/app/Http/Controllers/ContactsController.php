@@ -78,18 +78,18 @@ class ContactsController extends Controller
             }
 
         if (!empty($fullname)) {
-            $query->where('fullname', 'LIKE', '%' . $fullname . '%')->where('gender', $gender);
+            $query->where('fullname', 'LIKE', '%' . $fullname . '%');
         }
 
         if (!empty($request['from']) && !empty($request['until'])) {
-            $query->whereBetween('created_at', [$request['from'], $request['until']])->where('gender', $gender);
+            $query->whereBetween('created_at', [$request['from'], $request['until']]);
         }
 
         if (!empty($email)) {
-            $query->where('email','LIKE', '%' . $email . '%')->where('gender', $gender);
+            $query->where('email','LIKE', '%' . $email . '%');
         }
 
-        $contacts = $query->paginate(20);
+        $contacts = $query->paginate(10);
 
         return view('/contact/admin', compact('contacts','fullname','gender','email'));
     }

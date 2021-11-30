@@ -44,7 +44,7 @@ class ContactRequest extends FormRequest
             'first_name' => 'required',
             'gender' => 'required',
             'email'    => 'required|email',
-            'postcode' => ['required',new ZipCodeRule(),],
+            'postcode' => ['required',new ZipCodeRule()],
             'address' => 'required',
             'opinion' => 'required|max:120',
         ];

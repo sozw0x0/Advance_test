@@ -28,15 +28,12 @@
             <th>お名前<span class="label">※</span></th>
             <td class="flex">
               <div>
-                @if ($errors->get('last_name'))
-                <p class="error-message">{{ $errors->get('last_name') }}</p>
-                @endif
                 <input type="text" name="last_name" value="{{ old('last_name') }}" class="size-input-nameS"><br><span class="example">例）山田</span>
-              </div>
-              <div>
                 @if ($errors->has('last_name'))
                 <p class="error-message">{{ $errors->first('last_name') }}</p>
                 @endif
+              </div>
+              <div>
                 <input type="text" name="first_name" value="{{ old('first_name') }}" class="size-input-nameS"><br><span class="example">例）太郎</span>
                 @if ($errors->has('first_name'))
                 <p class="error-message">{{ $errors->first('first_name') }}</p>
